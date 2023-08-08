@@ -18,6 +18,7 @@ tests: ${BINARIES}
 	./initBoxTest
 	./areaOfBoxTest
 	./pointToStringTest
+	./boxToStringTest
 
 
 distanceBetweenTest: distanceBetweenTest.o $(COMMON_OBJECTS)
@@ -29,6 +30,8 @@ initPointTest: initPointTest.o $(COMMON_OBJECTS)
 pointsApproxEqualTest: pointsApproxEqualTest.o $(COMMON_OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
+boxToStringTest: boxToStringTest.o $(COMMON_OBJECTS)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
 boxesApproxEqualTest: boxesApproxEqualTest.o $(COMMON_OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
